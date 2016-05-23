@@ -49,6 +49,8 @@ extension MainViewController:InicioViewControllerDelegate, InfoViewControllerDel
     }
 }
 
+    // MARK:- Extension
+
 extension MainViewController:ViewControllerDelegate {
     func selectedIndexPath(indexPath:NSIndexPath) {
         

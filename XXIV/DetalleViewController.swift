@@ -66,6 +66,8 @@ class DetalleViewController: UIViewController {
     }
 }
 
+    // MARK:- Extension
+
 extension DetalleViewController:UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

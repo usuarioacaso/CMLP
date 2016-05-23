@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-hB-Ecy">
+                                <rect key="frame" x="140" y="530" width="320" height="50"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nc7-MU-GpL"/>
+                                </connections>
+                            </adBannerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1bo-iV-VCr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="534"/>
+                                <rect key="frame" x="0.0" y="48" width="600" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="Q4M-vG-f18" customClass="InicTableViewCell" customModule="XXIV" customModuleProvider="target">
@@ -63,12 +69,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="IkR-3F-Qey"/>
                                 </connections>
                             </tableView>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-hB-Ecy">
-                                <rect key="frame" x="140" y="530" width="320" height="50"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nc7-MU-GpL"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -82,7 +82,7 @@
                             <constraint firstItem="1bo-iV-VCr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o0R-HQ-v8E"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hp1-hB-Ecy" secondAttribute="bottom" constant="4" id="oYo-uW-5VP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hp1-hB-Ecy" secondAttribute="trailing" constant="-40" id="uJL-zp-sRB"/>
-                            <constraint firstItem="1bo-iV-VCr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zMp-HX-pGh"/>
+                            <constraint firstItem="1bo-iV-VCr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="48" id="zMp-HX-pGh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -169,7 +169,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="syj-Ay-UoR">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hyP-tx-kkd">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Menu" id="hyP-tx-kkd">
                             <connections>
                                 <action selector="openMenu:" destination="cgH-E2-MCN" id="CCC-5V-xVI"/>
                             </connections>

@@ -16,8 +16,6 @@ protocol RelacViewControllerDelegate:NSObjectProtocol {
 
 class RelacViewController: UIViewController, ADBannerViewDelegate {
     
-    //var bannerView:ADBannerView?
-    
     weak var delegate:RelacViewControllerDelegate?
     
     @IBOutlet weak var Banner: ADBannerView!
@@ -50,6 +48,8 @@ class RelacViewController: UIViewController, ADBannerViewDelegate {
         vistadetalle.data1 = datoapasar1
      }
     
+    // MARK:- Banner
+    
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         Banner?.hidden = false
     }
@@ -63,6 +63,8 @@ class RelacViewController: UIViewController, ADBannerViewDelegate {
         Banner?.hidden = true
     }
 }
+
+    // MARK:- Extension
 
 extension RelacViewController:UIPickerViewDelegate, UIPickerViewDataSource {
     

@@ -16,9 +16,9 @@ class ImagenesViewController: UIViewController, UIPageViewControllerDataSource {
     
     var pageViewController = UIPageViewController() // esta linea crea el view controller
     
-    let pageTitles = ["Monitores","Sexta Seccion","Decima Seccion","En el comedor","En el campo de batalla"]
-    let imagen = ["monitores.jpg","6ta.jpg","10ma.png","rancho_cadetes","maniobras"]
-    let pageFondo = ["Nuestros Monitores en 3er Año","Los reconocen ?","Parecen unos angelitos !","El rico arroz con frejoles","De maniobras en 4to año"]
+    let pageTitles = ["Monitores","Sexta Seccion","Novena Seccion","Decima Seccion","En el comedor","En el campo de batalla"]
+    let imagen = ["monitores.jpg","6ta.jpg","9na1967.jpg","10ma.png","rancho_cadetes","maniobras"]
+    let pageFondo = ["Nuestros Monitores en 3er Año","Los reconocen ?","Primer dia en el CMLP","Parecen unos angelitos !","El rico arroz con frejoles","De maniobras en 4to año"]
     
     weak var delegate:ImagenesViewControllerDelegate?
     

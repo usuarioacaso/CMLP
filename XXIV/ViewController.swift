@@ -16,35 +16,36 @@ protocol ViewControllerDelegate:NSObjectProtocol {
 
 class ViewController: UIViewController, ADBannerViewDelegate {
     
-    //var bannerView:ADBannerView?
-    
     @IBOutlet weak var Banner: ADBannerView!
     
     var itemsPrin: NSMutableArray!
     
     weak var delegate:ViewControllerDelegate?
     
-        private let itemsMenu = ["Inicio", "Informacion", "Relaciones por Secciones", "Procedencia", "Imagenes","Ubicacion",""]
+        private let itemsMenu = ["Inicio", "Informacion", "Relaciones por Secciones", "Procedencia", "Imagenes","Ubicacion","","","","",""]
     
-        private let itemsImage = ["browser_64px.png","compose_64px.png","document_64px.png","layers_64px.png","wallet_64px.png","pin_64px.png",""]
+        private let itemsImage = ["browser_64px.png","compose_64px.png","document_64px.png","layers_64px.png","wallet_64px.png","pin_64px.png","","","","",""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor(red: 0xfd/255, green: 0xe8/255, blue: 0xd7/255, alpha: 1.0)
 
         self.canDisplayBannerAds = true
         Banner?.delegate = self
         Banner?.hidden = true
-        
         view.backgroundColor = UIColor(red: 0xfd/255, green: 0xe8/255, blue: 0xd7/255, alpha: 1.0)
     }
 
+    // MARK:- Banner
+    
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         Banner?.hidden = false
     }
     
-    //func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-    //    return willLeave
-    //}
+//    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
+//        return willLeave
+//    }
     
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
         
@@ -52,6 +53,8 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         Banner?.hidden = true
     }
 }
+
+    // MARK:- Extension
 
 extension ViewController:UITableViewDelegate, UITableViewDataSource {
     
@@ -65,7 +68,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! InicTableViewCell
-        
+        cell.backgroundColor = UIColor(red: 0xfd/255, green: 0xe8/255, blue: 0xd7/255, alpha: 1.0)
         cell.label.text = itemsMenu[indexPath.row]
         let foto = itemsImage[indexPath.row]
         cell.imagen.image = UIImage(named: foto)

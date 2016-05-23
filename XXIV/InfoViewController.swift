@@ -16,8 +16,6 @@ protocol InfoViewControllerDelegate:NSObjectProtocol {
 
 class InfoViewController: UIViewController, ADBannerViewDelegate {
     
-    //var bannerView:ADBannerView?
-    
     @IBOutlet weak var Banner: ADBannerView!
     weak var delegate:InfoViewControllerDelegate?
 
@@ -34,6 +32,8 @@ class InfoViewController: UIViewController, ADBannerViewDelegate {
     @IBAction func openMenu(sender: AnyObject) {
         delegate?.openCloseMenu()
     }
+    
+    // MARK:- Banner
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         Banner?.hidden = false

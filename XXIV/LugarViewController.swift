@@ -53,6 +53,8 @@ class LugarViewController: UIViewController {
     }
 }
 
+    // MARK:- Extension
+
 extension LugarViewController:UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

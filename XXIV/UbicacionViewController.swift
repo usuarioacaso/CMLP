@@ -18,8 +18,6 @@ protocol UbicacionViewControllerDelegate:NSObjectProtocol {
 
 class UbicacionViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, ADBannerViewDelegate {
     
-    //var bannerView:ADBannerView?
-    
     @IBOutlet weak var Banner: ADBannerView!
     
     @IBOutlet weak var mapa: MKMapView!
@@ -83,6 +81,8 @@ class UbicacionViewController: UIViewController, CLLocationManagerDelegate, MKMa
     @IBAction func openMenu(sender: AnyObject) {
         delegate?.openCloseMenu()
     }
+    
+    // MARK:- Banner
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         Banner?.hidden = false
